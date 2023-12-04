@@ -111,7 +111,7 @@
                                     # Create parent directory if it does not exist
                                     ''
                                       {{.REMOTE_COMMAND}} {{.REMOTE_OPTS}} {{.REMOTE_USER}}@{{.REMOTE_HOST}} \
-                                      '${optionalString useSudo "{{.REMOTE_SUDO_COMMAND}} {{.REMOTE_SUDO_OPTS}} "} install -d -m 700 "$(dirname ${path})"'
+                                      '${optionalString useSudo "{{.REMOTE_SUDO_COMMAND}} {{.REMOTE_SUDO_OPTS}} "} install -d -g keys -m 710 "$(dirname ${path})"'
                                     ''
 
                                     # Copy file
